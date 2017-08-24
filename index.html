@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yandex Node.js School Test Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="http://localhost:3000/" method="POST" id="myForm">
+            <fieldset>
+                <label for="fio">ФИО</label>
+                <input type="text" id="fio" name="fio">
+                <span class="error-message">Ровно три слова</span>
+            </fieldset>
+            <fieldset>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <span class="error-message"> Формат email-адреса, но только в доменах ya.ru, yandex.ru, yandex.ua, yandex.by, yandex.kz, yandex.com.</span>
+            </fieldset>
+            <fieldset>
+                <label for="phone">Телефон</label>
+                <input type="phone" name="phone" id="phone">
+                <span class="error-message"> Номер телефона, который начинается на +7, и имеет формат +7(999)999-99-99. Кроме того, сумма всех цифр телефона не должна превышать 30.</span>
+            </fieldset>
+            <button type="submit" id="submitButton">
+                Submit
+            </button>
+        </form>
+        <div id="resultContainer">
+            <h2></h2>
+        </div>
+    </main>
+    <script src="index.js" defer></script>
+</body>
+</html>

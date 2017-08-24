@@ -1,0 +1,121 @@
+body {
+    font-family: Arial,sans-serif;
+}
+
+fieldset {
+    padding-left: 0;
+    border: none;
+}
+input {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    min-width: 240px;
+}
+input.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    display: none;
+    padding-left: 84px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+input.error + .error-message {
+    display: block;
+}
+
+label {
+    display: inline-block;
+    min-width: 80px;
+}
+
+button[type="submit"] {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    outline: none;
+    background: 0 0;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    border-color: #777;
+}
+
+button[type="submit"]:disabled {
+    opacity: .3;
+}
+
+button[type="submit"]:disabled:hover {
+    border: 1px solid #ccc;
+}
+
+#resultContainer {
+    display: none;
+    position: relative;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#resultContainer::before {
+    content: 'Server response:';
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -12px;
+    left: 20px;
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    background: gainsboro;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#resultContainer.success,
+#resultContainer.error,
+#resultContainer.progress {
+    display: block;
+}
+
+#resultContainer.success {
+    border-color: #070;
+    color: #070;
+}
+#resultContainer.success::before {
+    background: #070;
+    color: #fff;
+}
+
+#resultContainer.error {
+    border-color: #d00;
+    color: #d00;
+}
+#resultContainer.error::before {
+    background: #d00;
+    color: #fff;
+}
+
+#resultContainer.progress {
+    border-color: #669;
+    border-style: dashed;
+    color: #669;
+}
+#resultContainer.progress::before {
+    background: #669;
+    color: #fff;
+}

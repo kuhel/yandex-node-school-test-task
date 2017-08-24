@@ -156,9 +156,10 @@ class YaForm {
     }
 
     _sendData() {
-        const action = this.form.action;
+        const actionType = ACTIONS[Math.floor(Math.random() * ACTIONS.length)]
+        const url = `./mockServer/${actionType}.json`;
         this._clearTimeout();
-        return fetch(action)
+        return fetch(url)
             .then((response) => response.json());
     }
 }

@@ -1,1 +1,1 @@
-# yandex-node-school-test-task
+# Test task for Node.JS School by Yandex
